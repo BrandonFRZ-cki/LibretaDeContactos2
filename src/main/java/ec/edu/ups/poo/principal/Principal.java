@@ -8,6 +8,16 @@ import java.util.Scanner;
 
 public class Principal {
     public static void main(String[] args) {
+
+        //Pruebas con commits ----
+        Persona persona = new Persona();
+        persona.setNombre("Jose");
+        persona.setApellido("Perez");
+        persona.setCedula("010101010101");
+        persona.setDireccion("ElValle");
+        //--------
+
+
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("---------- LIBRETA DE CONTACTOS ---------");
