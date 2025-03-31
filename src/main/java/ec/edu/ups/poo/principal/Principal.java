@@ -71,7 +71,7 @@ public class Principal {
             int day = scanner.nextInt();
             scanner.nextLine();
 
-            GregorianCalendar fechaNacimiento = new GregorianCalendar(year, month, day);
+            GregorianCalendar fechaNacimiento = new GregorianCalendar(year, month-1, day);
             familiares[i] = new Familiar(cedula, nombre, apellido, direccion, parentesco, tipoSangre, fechaNacimiento);
         }
 
