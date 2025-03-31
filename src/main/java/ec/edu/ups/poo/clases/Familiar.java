@@ -43,32 +43,18 @@ public class Familiar extends Persona {
     }
 
     public double calcularEdad() {
-        Calendar fechaActual = Calendar.getInstance();
-        int esteYear = fechaActual.get(Calendar.YEAR);
-        int esteMes = fechaActual.get(Calendar.MONTH);
-        int esteDia = fechaActual.get(Calendar.DAY_OF_MONTH);
-
-        int yearNacimiento = fechaNacimiento.get(Calendar.YEAR);
-        int mesNacimiento = fechaNacimiento.get(Calendar.MONTH);
-        int diaNacimiento = fechaNacimiento.get(Calendar.DAY_OF_MONTH);
-
-        int edad = esteYear - yearNacimiento;
-
-        if (esteMes < mesNacimiento || (esteMes == mesNacimiento && esteDia < diaNacimiento)) {
-            edad--;
-        }
-
+        double edad = 0;
+        GregorianCalendar today = new GregorianCalendar();
+        long diffMillis = today.getTimeInMillis() - fechaNacimiento.getTimeInMillis();
+        long diffDays = diffMillis / (24 * 60 * 60 * 1000);
+        edad = diffDays / 365.25;
         return edad;
     }
 
     @Override
     public String toString() {
-        return "----- FAMILIAR -----" +
-                "\n\tNombre: " + getNombre() +
-                "\n\tApellido: " + getApellido() +
-                "\n\tC.I.: " + getCedula() +
-                "\n\tDirección: " + getDireccion() +
-                "\n\t--- Información Familiar ---" +
+        return
+                super.toString()+
                 "\n\tParentesco: " + parentesco +
                 "\n\tTipo de sangre: " + tipoDeSangre +
                 "\n\tEdad: " + calcularEdad() + " años";
