@@ -1,5 +1,5 @@
 package ec.edu.ups.poo.principal;
-
+// prueba 1
 import ec.edu.ups.poo.clases.Familiar;
 import ec.edu.ups.poo.clases.Persona;
 
