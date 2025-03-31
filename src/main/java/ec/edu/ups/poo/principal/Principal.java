@@ -50,24 +50,24 @@ public class Principal {
         }
         for (int i = 0; i < numeroDeFamiliares; i++) {
             System.out.println("-------------- FAMILIAR [" + (i + 1) + "] --------------");
-            System.out.print("Nombre → ");
+            System.out.print(" Nombre → ");
             nombre = scanner.nextLine();
-            System.out.print("Apellido → ");
+            System.out.print(" Apellido → ");
             apellido = scanner.nextLine();
             System.out.print("Cédula → ");
             cedula = scanner.nextLine();
-            System.out.print("Dirección → ");
+            System.out.print(" Dirección → ");
             direccion = scanner.nextLine();
-            System.out.print("Parentesco → ");
+            System.out.print(" Parentesco → ");
             String parentesco = scanner.nextLine();
-            System.out.print("Tipo de sangre → ");
+            System.out.print("sangre → ");
             String tipoSangre = scanner.nextLine();
-            System.out.println("* Fecha de nacimiento *");
-            System.out.print("Año → ");
+            System.out.println("*nacimiento *");
+            System.out.print(" Año → ");
             int year = scanner.nextInt();
-            System.out.print("Mes → ");
+            System.out.print(" Mes → ");
             int month = scanner.nextInt() - 1;
-            System.out.print("Día → ");
+            System.out.print(" Día → ");
             int day = scanner.nextInt();
             scanner.nextLine();
 
